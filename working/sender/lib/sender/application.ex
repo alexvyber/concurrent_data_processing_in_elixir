@@ -8,6 +8,7 @@ defmodule Sender.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      {Task.Supervisor, name: Sender.EmailTaskSupervisor}
       # Starts a worker by calling: Sender.Worker.start_link(arg)
       # {Sender.Worker, arg}
     ]
