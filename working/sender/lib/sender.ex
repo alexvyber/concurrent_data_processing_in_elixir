@@ -3,11 +3,10 @@ defmodule Sender do
   Documentation for Sender.
   """
 
-  def send_email("katzen@kotik.cat" = email), do:
-    raise "Oops, couldn't send email to #{email}!"
+  def send_email("katzen@kotik.cat" = email), do: :error
 
   def send_email(email) do
-    Process.sleep(3000)
+    Process.sleep(1500)
     IO.puts("Email to #{email} sent")
     {:ok, "email_sent"}
   end
