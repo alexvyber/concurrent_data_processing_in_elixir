@@ -7,7 +7,7 @@
 
 import_file("~/elixir/scripts/custom_iex.exs")
 
-sleep_timeout = 5000
+sleep_timeout = 600_000
 
 good_job = fn ->
   Process.sleep(sleep_timeout)

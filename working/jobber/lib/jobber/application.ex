@@ -14,7 +14,9 @@ defmodule Jobber.Application do
     ]
 
     children = [
+      {Registry, keys: :unique, name: Jobber.JobRegistry},
       {DynamicSupervisor, job_runner_config}
+
       # Starts a worker by calling: Jobber.Worker.start_link(arg)
       # {Jobber.Worker, arg}
     ]
